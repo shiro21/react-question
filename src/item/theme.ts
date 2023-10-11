@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export interface ThemeProps {
   background: string,
@@ -20,3 +20,13 @@ export const Container = styled.div`
   color: ${(props) => props.theme.text};
   height: 100%;
 `;
+
+export const GlobalStyle = createGlobalStyle`
+  div {
+    background: ${(props) => props.theme.background};
+    color: ${(props) => props.theme.text};
+  }
+  svg {
+    stroke: ${(props) => props.theme.text}
+  }
+`

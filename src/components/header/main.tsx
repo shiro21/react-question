@@ -1,9 +1,11 @@
 import styles from "../../style/main.module.css";
-import Explorer from "../../style/icon/explorer.svg";
+import { ReactComponent as ExplorerSVG } from "../../style/icon/explorer.svg";
+import { ReactComponent as JavascriptSVG } from "../../style/icon/javascript.svg";
+import { ReactComponent as VscodeSVG } from "../../style/icon/vscode.svg";
 import { cs, frontend, javascript } from "../../services/frontend";
 
-import ChevronDown from "../../style/icon/down.svg";
-import ChevronUp from "../../style/icon/up.svg";
+import { ReactComponent as ChevronDown } from "../../style/icon/down.svg";
+import { ReactComponent as ChevronUp } from "../../style/icon/up.svg";
 import { useState } from "react";
 
 interface FrontEndProps {
@@ -52,15 +54,15 @@ const MainPage = () => {
 
 
             <section>
-                <h2><img src={Explorer} /> CS</h2>
+                <h2><JavascriptSVG /> CS</h2>
 
                 <ul>
                     {
                         one.length > 0 && one.map((item, index) => (
-                            <li key={index} onClick={() => one1(item)}>
-                                <div className={styles.contents}>
+                            <li key={index}>
+                                <div className={styles.contents} onClick={() => one1(item)}>
                                     {
-                                        item.isOpen ? <img src={ChevronUp} /> : <img src={ChevronDown} />
+                                        item.isOpen ? <ChevronUp /> : <ChevronDown />
                                     }
                                     {item.title}
                                 </div>
@@ -75,15 +77,15 @@ const MainPage = () => {
             </section>
 
             <section>
-                <h2><img src={Explorer} /> Javascript</h2>
+                <h2><ExplorerSVG /> Javascript</h2>
 
                 <ul>
                     {
                         two.length > 0 && two.map((item, index) => (
-                            <li key={index} onClick={() => one2(item)}>
-                                <div className={styles.contents}>
+                            <li key={index}>
+                                <div className={styles.contents} onClick={() => one2(item)}>
                                     {
-                                        item.isOpen ? <img src={ChevronUp} /> : <img src={ChevronDown} />
+                                        item.isOpen ? <ChevronUp /> : <ChevronDown />
                                     }
                                     {item.title}
                                 </div>
@@ -98,15 +100,15 @@ const MainPage = () => {
             </section>
 
             <section>
-                <h2><img src={Explorer} /> FrontEnd</h2>
+                <h2><VscodeSVG /> FrontEnd</h2>
 
                 <ul>
                     {
                         three.length > 0 && three.map((item, index) => (
-                            <li key={index} onClick={() => one3(item)}>
-                                <div className={styles.contents}>
+                            <li key={index}>
+                                <div className={styles.contents} onClick={() => one3(item)}>
                                     {
-                                        item.isOpen ? <img src={ChevronUp} /> : <img src={ChevronDown} />
+                                        item.isOpen ? <ChevronUp /> : <ChevronDown />
                                     }
                                     {item.title}
                                 </div>

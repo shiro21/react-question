@@ -26,7 +26,26 @@ export const cs = [
             HTTPS는 인증서를 발급하고 유지하는데 추가 비용이 발생합니다. 개인정보와 같은 민감한 데이터를 주고 받는다면 HTTPS를 이용해야 하지만, 단순 정보 조회 같은 사이트는 HTTP를 적용해도 됩니다.
         `,
         isOpen: false,
-        link: "",
+        link: "https://shiro21.tistory.com/447",
+        link2: ""
+    },
+    {
+        id: 3,
+        title: "객체지향프로그래밍에 대해 설명해 주세요.",
+        arr: `
+            객체지향프로그래밍( OOP: Object Oriented Programming )은 컴퓨터 프로그래밍 패러다임 중 하나로, 데이터를 춯상화시켜 상태( Attribute )와 행위( Method )를 가진 객체로 만들고 그 객체들간의 상호작용을 통해 로직을 구성하는 프로그래밍 방법입니다.<br />
+            <br />
+            장점: 코드 재사용 및 유지보수 용이하고 대형 프로젝트에 적합합니다.<br />
+            단점: 처리속도가 느리고 설계 시 많은 시간이 필요하며, 객체가 많을 경우 용량이 커집니다.<br />
+            <br />
+            객체지향의 특성<br />
+            1. 추상화: 객체의 공통적인 속성과 기능을 추출하여 정의하는 것입니다.
+            2. 상속: 클래스간에 공유될 수 있는 속성과 기능들을 상위 클래스로 추상화 시켜 해당 상위 클래스로부터 확장된 여러 개의 하위 클래스들이 모두 상위 클래스의 속성과 기능들을 간편하게 사용할 수 있도록 합니다.<br />
+            3. 다형성: 어떤 객체의 속성이나 기능이 그 맥락에 따라 다른 역할을 수행할 수 있는 객체지향의 특성을 의미합니다.<br />
+            4. 캡슐화: 외부로부터 클래스에 정의된 속성과 기능들을 보호하고, 필요한 부분만 외부로 노출될 수 있도록하여 각 객체 고유의 독립성과 책임 영영을 안전하게 지키고자 하는 목적이 있습니다.
+        `,
+        isOpen: false,
+        link: "https://shiro21.tistory.com/448",
         link2: ""
     },
 ]
@@ -118,6 +137,63 @@ export const javascript = [
              - 블록레벨 스코프<br />
             <br />
             let과 const는 블록 스코프를 갖고 공통적으로 재선언이 되지 않습니다. 그러나 let은 재할당이 가능하고, const는 선언과 동시에 할당이 되기 때문에 재할당이 불가능합니다.
+        `,
+        isOpen: false,
+        link: "",
+        link2: ""
+    },
+    {
+        id: 7,
+        title: "비동기 함수에 대해 설명해 주세요.",
+        arr: `
+            비동기 함수는 현재 실행중인 코드 완료 여부와 무관하게 다음 코드로 넘어갑니다. 즉 요청과 응답이 동시에 이루어지지 않습니다.<br />
+            비동기 방식이 필요한 이유는 화면에서 서버로 데이터를 요청했을 때, 요청에 대한 응답을 무한정 기다릴 수 없기 때문에 기다리는 시간동안 다른 작업을 할 수 있도록 도와줍니다.
+        `,
+        isOpen: false,
+        link: "https://shiro21.tistory.com/449",
+        link2: ""
+    },
+    {
+        id: 8,
+        title: "Promise에 대해 설명해 주세요.",
+        arr: `
+            프로미스는 비동기 동작을 다루기 위한 패턴으로, 비동기 요청을 보내면 성공 또는 실패가 다양한 형태로 발생합니다. 프로미스를 사용하면 이러한 성공이나 실패를 편리한 방식으로 환원할 수 있습니다.<br />
+            new 연산자와 함께 호출한 프로미스의 인자로 넘겨주는 콜백함수는 호출할 때 바로 실행하며, 그 내부에 resolve, reject함수를 호출하는 구문이 있으면 둘 중 하나가 실행되기 전까지는 다음 .then().catch()구문으로 넘어가지 않습니다.<br />
+            pending, fulfilled, rejected 3가지 상태를 가집니다.
+        `,
+        isOpen: false,
+        link: "https://shiro21.tistory.com/450",
+        link2: ""
+    },
+    {
+        id: 9,
+        title: "Async & Await과 Promise의 차이점을 설명해 주세요.",
+        arr: `
+            프로미스를 사용할 때는 .catch()문으로 에러 핸들링이 가능합니다. 반대로 async/await은 에러 핸들링 기능이 따로 없기 때문에 try...catch()문을 사용해야 합니다.<br />
+            프로미스는 .then() 지옥의 가능성이 있기 때문에, 코드 길어질수록 async/await문을 사용하면 가독성에 유리합니다.
+        `,
+        isOpen: false,
+        link: "",
+        link2: ""
+    },
+    {
+        id: 10,
+        title: "ESLint에 대해 설명해 주세요.",
+        arr: `
+            자바스크립트 언어와 소스 코드를 분석하는 도구로 ESLint패키지를 설치해주면 코드에 특정 스타일과 규칙을 적용해 에러를 찾고 패턴을 적용시킬 수 있는 분석 툴입니다.<br />
+            사용 시 ECMAScript코드에서 문제점을 검사하고 일부는 더 나은 코드로 정정해주는 유용한 도구입니다.<br />
+            코드의 가독성을 높이고 잠재적인 오류와 버그를 제거해 단단한 코드를 만드는 것이 목적입니다.<br />
+            추가로 코드를 더 보기좋도록 포맷팅 해주는 Prettier를 ESLint와 함께 사용해주면 더 효율적입니다.
+        `,
+        isOpen: false,
+        link: "https://shiro21.tistory.com/451",
+        link2: ""
+    },
+    {
+        id: 11,
+        title: "ES6 문법에 추가된 내용들을 말씀해 주세요.",
+        arr: `
+            String Literal, 객체 비구조화, Object Literal, for...of, Spread Operator, Rest Parameter, Arrow Function, Default Params, let & const, import & export, Map & Set
         `,
         isOpen: false,
         link: "",
@@ -224,6 +300,21 @@ export const frontend = [
         `,
         isOpen: false,
         link: "https://shiro21.tistory.com/285",
+        link2: ""
+    }
+]
+
+export const react = [
+    {
+        id: 1,
+        title: "DOM과 Virtual DOM에 대해서 설명해 주세요.",
+        arr: `
+            DOM은 Document Object Model의 약자로, HTML, XML 문서의 인터페이스를 의미합니다.<br />
+            HTML은 브라우저에서 실행될 수 있게끔 DOM Tree로 파싱되고, 이를 바탕으로 렌더링됩니다. 가상돔은 추상화된 DOM을 뜻합니다. 기존 DOM을 조작하고 렌더링하는 부분에서 오는 시간을 줄여줍니다. DOM과 유사한 객체를 메모리에 올려놓고 변경 사항이 생기면 가상돔을 바꾸고, 실제 돔에서는 변경 사항만 변경하여 더 반응성 빠른 웹을 구현할 수 있습니다.<br />
+            리액트 또한 가상돔을 이용하여 구현되었습니다.
+        `,
+        isOpen: false,
+        link: "",
         link2: ""
     },
 ]

@@ -18,7 +18,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 16px;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -48,4 +48,29 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 16px;
+}
+
+html {
+	font-size: 13px;
+}
+  
+@media screen and (min-width: 960px) {
+	html {
+	  font-size: 14px;
+	}
+}
+  
+@media screen and (min-width: 1440px) {
+	html {
+	  font-size: 16px;
+	}
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
 }

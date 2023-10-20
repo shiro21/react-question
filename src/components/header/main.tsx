@@ -2,11 +2,12 @@ import styles from "../../style/main.module.css";
 import { ReactComponent as ExplorerSVG } from "../../style/icon/explorer.svg";
 import { ReactComponent as JavascriptSVG } from "../../style/icon/javascript.svg";
 import { ReactComponent as VscodeSVG } from "../../style/icon/vscode.svg";
+import { ReactComponent as ReactSVG } from "../../style/icon/react.svg";
 import { cs, frontend, javascript, react } from "../../services/frontend";
 
 import { ReactComponent as ChevronDown } from "../../style/icon/down.svg";
 import { ReactComponent as ChevronUp } from "../../style/icon/up.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface FrontEndProps {
     id: number,
@@ -17,12 +18,36 @@ interface FrontEndProps {
     link2: string
 }
 
-const MainPage = () => {
+interface MainProps {
+    headerSearch: string
+}
+
+const MainPage: React.FC<MainProps> = ({ headerSearch }) => {
 
     const [one, setOne] = useState<FrontEndProps[]>(cs);
     const [two, setTwo] = useState<FrontEndProps[]>(javascript);
     const [three, setThree] = useState<FrontEndProps[]>(frontend);
     const [four, setFour] = useState<FrontEndProps[]>(react);
+
+    useEffect(() => {
+        const oneFilter = cs.filter(item => {
+            return item.title.toUpperCase().includes(headerSearch.toUpperCase());
+        })
+        const twoFilter = javascript.filter(item => {
+            return item.title.toUpperCase().includes(headerSearch.toUpperCase());
+        })
+        const threeFilter = frontend.filter(item => {
+            return item.title.toUpperCase().includes(headerSearch.toUpperCase());
+        })
+        const fourFilter = react.filter(item => {
+            return item.title.toUpperCase().includes(headerSearch.toUpperCase());
+        })
+        setOne(oneFilter);
+        setTwo(twoFilter);
+        setThree(threeFilter);
+        setFour(fourFilter);
+
+    }, [headerSearch])
 
     const one1 = (item: FrontEndProps) => {
         setOne(s => 
@@ -63,7 +88,7 @@ const MainPage = () => {
 
 
             <section>
-                <h2><JavascriptSVG /> CS</h2>
+                <h2><ExplorerSVG /> CS</h2>
 
                 <ul>
                     {
@@ -86,7 +111,7 @@ const MainPage = () => {
             </section>
 
             <section>
-                <h2><ExplorerSVG /> Javascript</h2>
+                <h2><JavascriptSVG /> Javascript</h2>
 
                 <ul>
                     {
@@ -132,7 +157,7 @@ const MainPage = () => {
             </section>
 
             <section>
-                <h2><VscodeSVG /> FrontEnd</h2>
+                <h2><ReactSVG /> React</h2>
 
                 <ul>
                     {

@@ -103,6 +103,12 @@ const MainPage: React.FC<MainProps> = ({ headerSearch }) => {
                                 {
                                     item.isOpen && <div className={styles.one___} dangerouslySetInnerHTML={{__html: item.arr}} />
                                 }
+
+                                {
+                                    item.isOpen && item.link !== "" && <div>
+                                        <a style={{color: "blue", fontSize: "16px", textDecoration: "none"}} href={item.link} target="_blank" rel="noreferrer noopener">자세한 내용 보러가기</a>
+                                    </div>
+                                }
                                 
                             </li>
                         ))
@@ -125,6 +131,12 @@ const MainPage: React.FC<MainProps> = ({ headerSearch }) => {
                                 </div>
                                 {
                                     item.isOpen && <div className={styles.one___} dangerouslySetInnerHTML={{__html: item.arr}} />
+                                }
+
+                                {
+                                    item.isOpen && item.link !== "" && <div>
+                                        <a style={{color: "blue", fontSize: "16px", textDecoration: "none"}} href={item.link} target="_blank" rel="noreferrer noopener">자세한 내용 보러가기</a>
+                                    </div>
                                 }
                                 
                             </li>
@@ -149,6 +161,12 @@ const MainPage: React.FC<MainProps> = ({ headerSearch }) => {
                                 {
                                     item.isOpen && <div className={styles.one___} dangerouslySetInnerHTML={{__html: item.arr}} />
                                 }
+
+                                {
+                                    item.isOpen && item.link !== "" && <div>
+                                        <a style={{color: "blue", fontSize: "16px", textDecoration: "none"}} href={item.link} target="_blank" rel="noreferrer noopener">자세한 내용 보러가기</a>
+                                    </div>
+                                }
                                 
                             </li>
                         ))
@@ -171,6 +189,12 @@ const MainPage: React.FC<MainProps> = ({ headerSearch }) => {
                                 </div>
                                 {
                                     item.isOpen && <div className={styles.one___} dangerouslySetInnerHTML={{__html: item.arr}} />
+                                }
+
+                                {
+                                    item.isOpen && item.link !== "" && <div>
+                                        <a style={{color: "blue", fontSize: "16px", textDecoration: "none"}} href={item.link} target="_blank" rel="noreferrer noopener">자세한 내용 보러가기</a>
+                                    </div>
                                 }
                                 
                             </li>
